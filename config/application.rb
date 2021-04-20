@@ -31,7 +31,7 @@ module PgHeroSolo
       # not protected by auth, so do not expose data
       get "health", to: ->(env) { [200, {}, ["OK"]] }
 
-      mount PgHero::Engine, at: "/"
+      mount PgHero::Engine, at: "/", constraints: { host: ENV['PGHERO_HOST'] }
     end
 
     config.cache_classes = true
