@@ -1,0 +1,7 @@
+databases:
+  main:
+    url: <%= ENV["PGHERO_DATABASE_URL"] %>
+  replica:
+    url: <%= ENV["REPLICA_DATABASE_URL"] %>
+  customer_replica:
+    url: <%= ENV["CUSTOMER_REPLICA_DATABASE_URL"] %>
